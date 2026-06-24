@@ -20,15 +20,25 @@ public class DSA{
         }
         System.out.println("The reverse of "+original+" is "+rev);
     }
+    public void CountDigits(int num){
+        int original = num;
+        int count = 0;
+        while(num!=0){
+            count++;
+            num/=10;
+        }
+        System.out.println("The number of digits in "+original+" is "+count);
+    }
     public static void main(String[] args){
         DSA obj = new DSA();
         int N = 10;
-        int num = 567;
+        int num = 956630;
         System.out.println("The Printing of N Natural Numbers");
         obj.N_Numbers(N);
         System.out.println("The Sum of N Natural Numbers");
         obj.Sum_N_Numbers(N);
         System.out.println("Reversing a Number");
         obj.Reverse_Number(num);
+        obj.CountDigits(num);
     }
 }
