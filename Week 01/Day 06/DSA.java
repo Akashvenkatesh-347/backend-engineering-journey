@@ -31,13 +31,14 @@ public class DSA{
     }
     //Decimal to Binary
     public void decToBin(int num){
+        int original = num;
         String ans = "";
         while(num > 0){
             int remainder = num%2;
-            ans+=remainder;
+            ans= remainder + ans;
             num/=2;
         }
-        System.out.println("The binary equivalent of "+num+" is "+ans);
+        System.out.println("The binary equivalent of "+original+" is "+ans);
     }
     //Count Vowels in String
     public void countVowels(String text){
